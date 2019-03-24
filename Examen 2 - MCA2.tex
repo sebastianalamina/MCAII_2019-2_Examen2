@@ -90,7 +90,8 @@
 %Planteamiento (1)
 \textbf{Planteamiento:}
 
-\textit{Por discos...}
+\textit{Por discos...} \\
+$r = x$
 $$V = \int_{0}^{1} \pi x^2\ dy$$
 Pero $x$ se dividiría en dos intervalos... Sea $\lambda$ la intersección entre $x=1$ y $y=-e^{x^2}$,
 entonces el método por discos sería:\\
@@ -189,13 +190,23 @@ $$V = \int_{0}^{\pi/3} \pi ( (2)^2 - (2 - \sec x)^2 ) \ dx$$
 $r = (2-y)$ \\
 $h = \pi/3$ con $0 \leq y \leq 1$ \\
 y $h = \pi/3 - \arcsec(y)$ con $1 \leq y \leq 2$
-$$V = \int_{0}^{1} 2\pi (2-y) (\pi/3)\ dy + \int_{1}^{2} 2\pi (2-y) ( \pi/3 - \arcsec(y) )\ dy$$
+$$V = \int_{0}^{1} 2\pi (2-y) (\pi/3)\ dy \rightarrow$$
+$$+ \int_{1}^{2} 2\pi (2-y) ( \pi/3 - \arcsec(y) )\ dy$$
 
 %Solución (3)
 \textbf{Solución:}
 
-\textit{Por discos...} \\
-Aproximadamente 11.1079
+\textit{Por discos...}
+$$V = \int_{0}^{\pi/3} \pi ( (2)^2 - (2 - \sec x)^2 ) \ dx$$
+$$= \pi \int_{0}^{\pi/3} (4 - 4 + 4\sec x - \sec^2 x)\ dx$$
+$$= \pi \int_{0}^{\pi/3} (4\sec x - \sec^2 x)\ dx$$
+$$= \pi \bigg[ 4 \int_{0}^{\pi/3} \sec x \ dx - \int_{0}^{\pi/3} \sec^2 x\ dx \bigg]$$
+$$= \pi \bigg[ 4 \Big[ \ln{(\tan x+\sec x)} \Big]_{0}^{\pi/3} - \Big[ \tan x \Big]_{0}^{\pi/3} \bigg] $$
+$$= \pi \bigg[ 4 \Big[ \ln{(\tan \frac{\pi}{3}+\sec \frac{\pi}{3})} - \ln{(\tan 0+\sec 0)} \Big] \rightarrow$$
+$$- \Big[ \tan \frac{\pi}{3} - \tan 0 \Big] \bigg] $$
+$$= \pi \bigg[ 4 \Big[ \ln{(\sqrt{3}+2)} - \ln{(0+1)} \Big] - \Big[ \sqrt{3} - 0 \Big] \bigg]$$
+$$= \pi \bigg[ 4 \Big[ \ln{(\sqrt{3}+2)} - 0 \Big] - \sqrt{3} \bigg]$$
+$$= \pi \bigg( 4 \ln{(\sqrt{3}+2)} - \sqrt{3} \bigg) \approx 11.1079...$$
 
 \end{multicols}
 
