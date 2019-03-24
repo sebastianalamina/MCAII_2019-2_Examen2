@@ -246,7 +246,7 @@ $$= \pi \bigg( 4 \ln{(\sqrt{3}+2)} - \sqrt{3} \bigg) \approx 11.1079...$$
 \textit{Por discos...} \\
 $r_m = 2-\sqrt{y}$ \\
 $r_M = 2-(-\sqrt{4-y} + 2) = \sqrt{4-y}$
-$$V = \int_{0}^{4} \pi ( (\sqrt{4-y})^2 - (2-\sqrt{y})^2 ) \ dy$$
+$$V = \int_{0}^{4} \pi ( (\sqrt{4-y})^2 - (2-\sqrt{y})^2 ) \ dy$$\\\\
 
 \textit{Por cilindros...} \\
 $r = 2-x$ \\
@@ -256,10 +256,17 @@ $$V = \int_{0}^{2} 2\pi (2-x)(-2x^2+4x)\ dx$$
 %Solución (4)
 \textbf{Solución:}
 
-\textit{Por cualquiera (de preferencia cilindros)...} \\
-Aproximadamente 16.75516081914556
+\textit{Por cilindros...}
+$$V = 2\pi \int_{0}^{2} (2-x)(-2x^2+4x)\ dx$$
+$$= 2\pi \int_{0}^{2} (2x^3 - 8x^2 + 8x)\ dx$$
+$$= 2\pi \bigg[ \frac{x^4}{2} - \frac{8x^3}{3} + 4x^2 \bigg]_{0}^{2}
+= 2\pi \bigg[ \frac{16}{2} - \frac{64}{3} + 16 \bigg]$$
+$$= 2\pi \bigg[ -\frac{80}{6} + 16 \bigg] = 2\pi \Big( \frac{16}{6} \Big)
+= \frac{16\pi}{3}$$
 
 \end{multicols}
+
+\newpage
 
 % 5 ----------------------------------------------------------------------------------------------
 \item Determina el volumen de la región encerrada entre las curvas $y = 1 + x^2$ y $y = 0$ al rotar
@@ -344,6 +351,8 @@ Estas integrales no tienen una solución concreta. Sin embargo, ambas arrojan co
 aproximado de 36.574756682... al utilizar "integración numérica".
 
 \end{multicols}
+
+\newpage
 
 % 7 ----------------------------------------------------------------------------------------------
 \item Determinar la superficie del sólido de revolución generado al rotar en el eje $y$ la región
