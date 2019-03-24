@@ -113,6 +113,8 @@ $$= -\pi[\frac{1}{e}-1] = \pi - \frac{\pi}{e}$$
 \item Encuentra el volumen del sólido formado por la región encerrada por las curvas $y=x^2 +1$,
       $y=x+3$ al rotar alrededor del eje $y = -1$.
 
+\begin{multicols}{2}
+
 %Gráfica (2)
 \begin{tikzpicture}
     \begin{axis}[xmin= -2.5, xmax= 2.5, ymin= -1.5, ymax= 5.5, width= 5cm, height= 5cm,
@@ -136,22 +138,63 @@ $$= -\pi[\frac{1}{e}-1] = \pi - \frac{\pi}{e}$$
     \end{axis}
 \end{tikzpicture}
 
-%Solución (2)
+%Planteamiento (2)
+\textbf{Planteamiento:}
 
+\textit{Por discos...} \\
+$r_m = (x^2 + 1) + 1 = x^2 + 2$ \\
+$r_M = (x + 3) + 1 = x + 4$ \\
+$$V = \int_{-1}^{2} \pi ( (x+4)^2 - (x^2 + 2)^2 ) \ dx$$
+
+\textit{Por cilindros...} \\
+$r = (x+3)+1 = x+4$ \\
+$h = $Aquí se complica, $\therefore$ se resuelve por discos...
+
+%Solución (2)
+\textbf{Solución:}
+
+\textit{Por discos...} \\
+$$V = \int_{-1}^{2} \pi ( (x+4)^2 - (x^2 + 2)^2 ) \ dx$$ \\
+$$= \pi \int_{-1}^{2} (x^2 + 8x + 16 - x^4 - 4x^2 -4) \ dx$$ \\
+$$= \pi \int_{-1}^{2} (-x^4 -3x^2 + 8x + 12)\ dx$$ \\
+$$= \pi [\frac{-x^5}{5} - x^3 + 4x^2 + 12x]_{-1}^{2}$$
+$$= \pi [\frac{-32}{5} - 8 + 16 + 24 - \frac{1}{5} - 1 - 4  + 12]$$
+$$= \pi [\frac{-33}{5}+39] = \pi [\frac{-33}{5} + \frac{195}{5}] = \frac{162}{5}\pi$$
+
+\end{multicols}
 
 % 3 ----------------------------------------------------------------------------------------------
 \item Encuentra el volumen del sólido generado al hacer rotar alrededor de la recta $y=2$ la región
       acotada por las curvas $y = \sec x$, $y = 0$, $0 \leq x \leq \pi/3$.
 
+\begin{multicols}{2}
+
 %Gráfica (3)
 \includegraphics[width=5cm]{Images/grafica3.png}
 
+%Planteamiento (3)
+\textbf{Planteamiento:}
+
+\textit{Por discos...} \\
+
+
+\textit{Por cilindros...} \\
+
+
 %Solución (3)
+\textbf{Solución:}
+
+\textit{Por xxxxxx...} \\
+
+
+\end{multicols}
 
 
 % 4 ----------------------------------------------------------------------------------------------
 \item Halla el volumen del sólido de revolución generado al hacer rotar la región acotada por las
       curvas $y = x^2$, $y = 4x - x^2$ , en torno a la recta $x = 2$.
+
+\begin{multicols}{2}
 
 %Gráfica (4)
 \begin{tikzpicture}
@@ -176,12 +219,28 @@ $$= -\pi[\frac{1}{e}-1] = \pi - \frac{\pi}{e}$$
     \end{axis}
 \end{tikzpicture}
 
-%Solución (4)
+%Planteamiento (4)
+\textbf{Planteamiento:}
 
+\textit{Por discos...} \\
+
+
+\textit{Por cilindros...} \\
+
+
+%Solución (4)
+\textbf{Solución:}
+
+\textit{Por xxxxxx...} \\
+
+
+\end{multicols}
 
 % 5 ----------------------------------------------------------------------------------------------
 \item Determina el volumen de la región encerrada entre las curvas $y = 1 + x^2$ y $y = 0$ al rotar
       alrededor del eje $x$ cuando $0 \leq x \leq 2$.
+
+\begin{multicols}{2}
 
 %Gráfica (5)
 \begin{tikzpicture}
@@ -205,22 +264,54 @@ $$= -\pi[\frac{1}{e}-1] = \pi - \frac{\pi}{e}$$
     \end{axis}
 \end{tikzpicture}
 
-%Solución (5)
+%Planteamiento (5)
+\textbf{Planteamiento:}
 
+\textit{Por discos...} \\
+
+
+\textit{Por cilindros...} \\
+
+
+%Solución (5)
+\textbf{Solución:}
+
+\textit{Por xxxxxx...} \\
+
+
+\end{multicols}
 
 % 6 ----------------------------------------------------------------------------------------------
 \item Determina el volumen de la región encerrada por la función $x = \sqrt{\sin y}$ con
       $0 \leq y \leq \pi$ y $x = 0$ si rota en $y = 4$.
 
+\begin{multicols}{2}
+
 %Gráfica (6)
 \includegraphics[height=5cm]{Images/grafica5.png}
 
-%Solución (6)
+%Planteamiento (6)
+\textbf{Planteamiento:}
 
+\textit{Por discos...} \\
+
+
+\textit{Por cilindros...} \\
+
+
+%Solución (6)
+\textbf{Solución:}
+
+\textit{Por xxxxxx...} \\
+
+
+\end{multicols}
 
 % 7 ----------------------------------------------------------------------------------------------
 \item Determinar la superficie del sólido de revolución generado al rotar en el eje $y$ la región
       definida por $y = x^3$ con $0 \leq x \leq 1$.
+
+\begin{multicols}{2}
 
 %Gráfica (7)
 \begin{tikzpicture}
@@ -244,8 +335,22 @@ $$= -\pi[\frac{1}{e}-1] = \pi - \frac{\pi}{e}$$
     \end{axis}
 \end{tikzpicture}
 
-%Solución (7)
+%Planteamiento (7)
+\textbf{Planteamiento:}
 
+\textit{Por discos...} \\
+
+
+\textit{Por cilindros...} \\
+
+
+%Solución (7)
+\textbf{Solución:}
+
+\textit{Por xxxxxx...} \\
+
+
+\end{multicols}
 
 \end{enumerate}
 
