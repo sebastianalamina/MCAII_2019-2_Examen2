@@ -5,7 +5,10 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{enumitem}
+
 \usepackage{multicol}
+\setlength{\columnseprule}{1pt}
+\def\columnseprulecolor{\color{black}}
 
 \usepackage{pgfplots}
 \usepgfplotslibrary{fillbetween}
@@ -81,16 +84,22 @@
 \end{tikzpicture}
 
 %Planteamiento (1)
-%\textbf{Planteamiento:} \\
-%\textit{Por discos...} \\
-%$$\int_{a}^{b} x^2 dx$$ \\
-%\textit{Por cilindros...} \\
-%$$\int_{a}^{b} x^2 dx$$
+\textbf{Planteamiento:}
 
-\end{multicols}
+\textit{Por discos...} \\
+$$V = \int_{0}^{1} x\ dy$$
+Pero $x$ se dividiría en dos intervalos... Sea $\lambda$ la intersección entre $x=1$ y $y=-e^{x^2}$,
+entonces el método por discos sería;\\
+$$V = \int_{0}^{\lambda} \pi\ dy + \int_{\lambda}^{1} \pi( \sqrt{-\ln{y}} )^2\ dy $$
+
+\textit{Por cilindros...} \\
+$r = x$ \\
+$h = e^{-x^2}$ \\
+$$V = \int_{0}^{1} 2 \pi x e^{-x^2}\ dx$$
 
 %Solución (1)
 
+\end{multicols}
 
 % 2 ----------------------------------------------------------------------------------------------
 \item Encuentra el volumen del sólido formado por la región encerrada por las curvas $y=x^2 +1$,
