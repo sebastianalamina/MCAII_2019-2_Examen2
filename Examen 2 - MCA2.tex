@@ -61,7 +61,7 @@
 
 %Gráfica (1)
 \begin{tikzpicture}
-    \begin{axis}[xmin= -0.5, xmax= 1.5, ymin= -0.5, ymax= 1.5, width= 5cm, height= 5cm,
+    \begin{axis}[xmin= -0.5, xmax= 1.5, ymin= -0.5, ymax= 1.5, width= 6cm, height= 6cm,
         xtick distance= 0.5, ytick distance = 0.5, xlabel=$x$, ylabel=$y$, axis lines=center,
         legend entries={$y=e^{-x^2}$, $y=0$, $x=0$, $x=1$},
         legend style={legend pos=outer north east} ]
@@ -89,7 +89,7 @@
 \textit{Por discos...} \\
 $$V = \int_{0}^{1} x\ dy$$
 Pero $x$ se dividiría en dos intervalos... Sea $\lambda$ la intersección entre $x=1$ y $y=-e^{x^2}$,
-entonces el método por discos sería;\\
+entonces el método por discos sería:\\
 $$V = \int_{0}^{\lambda} \pi\ dy + \int_{\lambda}^{1} \pi( \sqrt{-\ln{y}} )^2\ dy $$
 
 \textit{Por cilindros...} \\
@@ -98,6 +98,14 @@ $h = e^{-x^2}$ \\
 $$V = \int_{0}^{1} 2 \pi x e^{-x^2}\ dx$$
 
 %Solución (1)
+\textbf{Solución:}
+
+\textit{Por cilindros...} \\
+$$V = \int_{0}^{1} 2 \pi x e^{-x^2}\ dx = 2\pi \int_{0}^{1} x e^{-x^2}\ dx$$ \\
+Sea $u = -x^2$, ent. $du = -2x\ dx \implies dx = \frac{du}{-2x}$ \\
+$$V = 2\pi \int_{x=0}^{x=1} -\frac{x}{2x} e^u\ du = -\pi \int_{x=0}^{x=1} e^u\ du$$ \\
+$$= -\pi[e^u]_{x=0}^{x=1} = -\pi[e^{-x^2}]_{x=0}^{x=1} = -\pi[e^{-1}-e^0]$$ \\
+$$= -\pi[\frac{1}{e}-1] = \pi - \frac{\pi}{e}$$
 
 \end{multicols}
 
