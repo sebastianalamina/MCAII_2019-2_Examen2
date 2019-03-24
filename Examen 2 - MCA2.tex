@@ -269,7 +269,7 @@ Aproximadamente 16.75516081914556
 
 %Gráfica (5)
 \begin{tikzpicture}
-    \begin{axis}[xmin= -1, xmax= 3, ymin= -1, ymax= 6, width= 5cm, height= 5cm,
+    \begin{axis}[xmin= -0.5, xmax= 3, ymin= -1, ymax= 5.5, width= 4cm, height= 4cm,
         xtick distance= 1, ytick distance = 1, xlabel=$x$, ylabel=$y$, axis lines=center,
         legend entries={$y=1+x^2$, $y=0$},
         legend style={legend pos=outer north east} ]
@@ -294,8 +294,7 @@ Aproximadamente 16.75516081914556
 
 \textit{Por discos...} \\
 $r = 1+x^2$ \\
-$$V = \int_{0}^{2} \pi (1+x^2)\ dx$$
-
+$$V = \int_{0}^{2} \pi (1+x^2)^2\ dx$$
 \textit{Por cilindros...} \\
 $r = y$ \\
 $h = 2$ con $0 \leq y \leq 1$ \\
@@ -306,8 +305,14 @@ $$V = \int_{0}^{1} 2\pi y (2)\ dy + \int_{1}^{5} 2\pi y (2-\sqrt{y-1})\ dy$$
 %Solución (5)
 \textbf{Solución:}
 
-\textit{Por discos...} \\
-Aproximadamente 43.14453910929983
+\textit{Por discos...}
+$$V = \int_{0}^{2} \pi (1+x^2)^2\ dx$$
+$$= \pi \int_{0}^{2} (1 + 2x^2 + x^4)\ dx$$
+$$= \pi \bigg[ x + \frac{2x^3}{3} + \frac{x^5}{5} \bigg]_{0}^{2}$$
+$$= \pi \bigg[ 2 + \frac{16}{3} + \frac{32}{5} - 0 - 0 - 0 \bigg]$$
+$$= \pi \bigg[ 2 + \frac{176}{15} \bigg]$$
+$$= \frac{206\pi}{15}$$
+
 
 \end{multicols}
 
