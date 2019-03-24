@@ -6,6 +6,10 @@
 \usepackage{graphicx}
 \usepackage{enumitem}
 
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+
 \usepackage{multicol}
 \setlength{\columnseprule}{1pt}
 \def\columnseprulecolor{\color{black}}
@@ -86,23 +90,23 @@
 %Planteamiento (1)
 \textbf{Planteamiento:}
 
-\textit{Por discos...} \\
-$$V = \int_{0}^{1} x\ dy$$
+\textit{Por discos...}
+$$V = \int_{0}^{1} \pi x^2\ dy$$
 Pero $x$ se dividiría en dos intervalos... Sea $\lambda$ la intersección entre $x=1$ y $y=-e^{x^2}$,
 entonces el método por discos sería:\\
 $$V = \int_{0}^{\lambda} \pi\ dy + \int_{\lambda}^{1} \pi( \sqrt{-\ln{y}} )^2\ dy $$
 
 \textit{Por cilindros...} \\
 $r = x$ \\
-$h = e^{-x^2}$ \\
+$h = e^{-x^2}$
 $$V = \int_{0}^{1} 2 \pi x e^{-x^2}\ dx$$
 
 %Solución (1)
 \textbf{Solución:}
 
-\textit{Por cilindros...} \\
+\textit{Por cilindros...}
 $$V = \int_{0}^{1} 2 \pi x e^{-x^2}\ dx = 2\pi \int_{0}^{1} x e^{-x^2}\ dx$$ \\
-Sea $u = -x^2$, ent. $du = -2x\ dx \implies dx = \frac{du}{-2x}$ \\
+Sea $u = -x^2$, ent. $du = -2x\ dx \implies dx = \frac{du}{-2x}$
 $$V = 2\pi \int_{x=0}^{x=1} -\frac{x}{2x} e^u\ du = -\pi \int_{x=0}^{x=1} e^u\ du$$ \\
 $$= -\pi[e^u]_{x=0}^{x=1} = -\pi[e^{-x^2}]_{x=0}^{x=1} = -\pi[e^{-1}-e^0]$$ \\
 $$= -\pi[\frac{1}{e}-1] = \pi - \frac{\pi}{e}$$
@@ -117,7 +121,7 @@ $$= -\pi[\frac{1}{e}-1] = \pi - \frac{\pi}{e}$$
 
 %Gráfica (2)
 \begin{tikzpicture}
-    \begin{axis}[xmin= -2.5, xmax= 2.5, ymin= -1.5, ymax= 5.5, width= 5cm, height= 5cm,
+    \begin{axis}[xmin= -2.5, xmax= 2.5, ymin= -1.5, ymax= 5.5, width= 6cm, height= 6cm,
         xtick distance= 1, ytick distance = 1, xlabel=$x$, ylabel=$y$, axis lines=center,
         legend entries={$y=x^2 +1$, $y=x+3$, $y = -1$},
         legend style={legend pos=outer north east} ]
@@ -143,17 +147,17 @@ $$= -\pi[\frac{1}{e}-1] = \pi - \frac{\pi}{e}$$
 
 \textit{Por discos...} \\
 $r_m = (x^2 + 1) + 1 = x^2 + 2$ \\
-$r_M = (x + 3) + 1 = x + 4$ \\
+$r_M = (x + 3) + 1 = x + 4$
 $$V = \int_{-1}^{2} \pi ( (x+4)^2 - (x^2 + 2)^2 ) \ dx$$
 
 \textit{Por cilindros...} \\
 $r = (x+3)+1 = x+4$ \\
-$h = $Aquí se complica, $\therefore$ se resuelve por discos...
+$h = $Aquí se "complica", $\therefore$ se resuelve por discos...
 
 %Solución (2)
 \textbf{Solución:}
 
-\textit{Por discos...} \\
+\textit{Por discos...}
 $$V = \int_{-1}^{2} \pi ( (x+4)^2 - (x^2 + 2)^2 ) \ dx$$ \\
 $$= \pi \int_{-1}^{2} (x^2 + 8x + 16 - x^4 - 4x^2 -4) \ dx$$ \\
 $$= \pi \int_{-1}^{2} (-x^4 -3x^2 + 8x + 12)\ dx$$ \\
@@ -162,6 +166,7 @@ $$= \pi [\frac{-32}{5} - 8 + 16 + 24 - \frac{1}{5} - 1 - 4  + 12]$$
 $$= \pi [\frac{-33}{5}+39] = \pi [\frac{-33}{5} + \frac{195}{5}] = \frac{162}{5}\pi$$
 
 \end{multicols}
+\newpage
 
 % 3 ----------------------------------------------------------------------------------------------
 \item Encuentra el volumen del sólido generado al hacer rotar alrededor de la recta $y=2$ la región
@@ -176,16 +181,21 @@ $$= \pi [\frac{-33}{5}+39] = \pi [\frac{-33}{5} + \frac{195}{5}] = \frac{162}{5}
 \textbf{Planteamiento:}
 
 \textit{Por discos...} \\
-
+$r_m = 2 - \sec x$ \\
+$r_M = 2$
+$$V = \int_{0}^{\pi/3} \pi ( (2)^2 - (2 - \sec x)^2 ) \ dx$$
 
 \textit{Por cilindros...} \\
-
+$r = (2-y)$ \\
+$h = \pi/3$ con $0 \leq y \leq 1$ \\
+y $h = \pi/3 - \arcsec(y)$ con $1 \leq y \leq 2$
+$$V = \int_{0}^{1} 2\pi (2-y) (\pi/3)\ dy + \int_{1}^{2} 2\pi (2-y) ( \pi/3 - \arcsec(y) )\ dy$$
 
 %Solución (3)
 \textbf{Solución:}
 
-\textit{Por xxxxxx...} \\
-
+\textit{Por discos...} \\
+Aproximadamente 11.1079
 
 \end{multicols}
 
@@ -223,16 +233,20 @@ $$= \pi [\frac{-33}{5}+39] = \pi [\frac{-33}{5} + \frac{195}{5}] = \frac{162}{5}
 \textbf{Planteamiento:}
 
 \textit{Por discos...} \\
-
+$r_m = 2-\sqrt{y}$ \\
+$r_M = 2-(-\sqrt{4-y} + 2) = \sqrt{4-y}$
+$$V = \int_{0}^{4} \pi ( (\sqrt{4-y})^2 - (2-\sqrt{y})^2 ) \ dy$$
 
 \textit{Por cilindros...} \\
-
+$r = 2-x$ \\
+$h = (4x-x^2)-(x^2) = -2x^2 + 4x$
+$$V = \int_{0}^{2} 2\pi (2-x)(-2x^2+4x)\ dx$$
 
 %Solución (4)
 \textbf{Solución:}
 
-\textit{Por xxxxxx...} \\
-
+\textit{Por cualquiera (de preferencia cilindros)...} \\
+Aproximadamente 16.75516081914556
 
 \end{multicols}
 
@@ -268,16 +282,21 @@ $$= \pi [\frac{-33}{5}+39] = \pi [\frac{-33}{5} + \frac{195}{5}] = \frac{162}{5}
 \textbf{Planteamiento:}
 
 \textit{Por discos...} \\
-
+$r = 1+x^2$ \\
+$$V = \int_{0}^{2} \pi (1+x^2)\ dx$$
 
 \textit{Por cilindros...} \\
+$r = y$ \\
+$h = 2$ con $0 \leq y \leq 1$ \\
+$h = 2 - \sqrt{y-1}$ con $1 \leq y \leq 5$
 
+$$V = \int_{0}^{1} 2\pi y (2)\ dy + \int_{1}^{5} 2\pi y (2-\sqrt{y-1})\ dy$$
 
 %Solución (5)
 \textbf{Solución:}
 
-\textit{Por xxxxxx...} \\
-
+\textit{Por discos...} \\
+Aproximadamente 43.14453910929983
 
 \end{multicols}
 
@@ -294,16 +313,20 @@ $$= \pi [\frac{-33}{5}+39] = \pi [\frac{-33}{5} + \frac{195}{5}] = \frac{162}{5}
 \textbf{Planteamiento:}
 
 \textit{Por discos...} \\
-
+$r_m = (4-\pi) + \arcsin{x^2}$ \\
+$r_M = 4 - \arcsin{x^2}$
+$$V = \int_{0}^{1} \pi ( (4 - \arcsin{x^2})^2 - ((4-\pi) + \arcsin{x^2})^2 ) \ dx$$
 
 \textit{Por cilindros...} \\
-
+$r = 4-y$ \\
+$h = \sqrt{\sin y}$
+$$V = \int_{0}^{\pi} 2\pi (4-y) (\sqrt{\sin y})\ dy$$
 
 %Solución (6)
 \textbf{Solución:}
 
-\textit{Por xxxxxx...} \\
-
+\textit{Por ???...} \\
+Aproximadamente 36.574756682913
 
 \end{multicols}
 
@@ -338,17 +361,19 @@ $$= \pi [\frac{-33}{5}+39] = \pi [\frac{-33}{5} + \frac{195}{5}] = \frac{162}{5}
 %Planteamiento (7)
 \textbf{Planteamiento:}
 
-\textit{Por discos...} \\
+\textit{Con dx...} \\
+$r = x$
+$$S = \int_{0}^{1} 2\pi x \sqrt{1+ (3x^2)^2 }\ dx$$
 
-
-\textit{Por cilindros...} \\
-
+\textit{Con dy...} \\
+$r = x = \sqrt[3]{y}$
+$$S = \int_{0}^{1} 2\pi (\sqrt[3]{y}) \sqrt{1+ (\frac{y^{-2/3}}{3})^2 }\ dx$$
 
 %Solución (7)
 \textbf{Solución:}
 
-\textit{Por xxxxxx...} \\
-
+\textit{Por discos (tal vez)...} \\
+Aproximadamente 5.919430472443023
 
 \end{multicols}
 
