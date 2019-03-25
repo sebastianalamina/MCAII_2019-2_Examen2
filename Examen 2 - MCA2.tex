@@ -5,6 +5,7 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{enumitem}
+\usepackage{gensymb}
 
 \DeclareMathOperator{\arcsec}{arcsec}
 \DeclareMathOperator{\arccot}{arccot}
@@ -94,7 +95,7 @@
 $r = x$
 $$V = \int_{0}^{1} \pi x^2\ dy$$
 Pero $x$ se dividiría en dos intervalos... Sea $\lambda$ la intersección entre $x=1$ y $y=-e^{x^2}$,
-entonces el método por discos sería:\\
+entonces el método por discos sería:
 $$V = \int_{0}^{\lambda} \pi\ dy + \int_{\lambda}^{1} \pi( \sqrt{-\ln{y}} )^2\ dy $$
 
 \textit{Por cilindros...} \\
@@ -108,8 +109,8 @@ $$V = \int_{0}^{1} 2 \pi x e^{-x^2}\ dx$$
 \textit{Por cilindros...}
 $$V = \int_{0}^{1} 2 \pi x e^{-x^2}\ dx = 2\pi \int_{0}^{1} x e^{-x^2}\ dx$$ \\
 Sea $u = -x^2$, ent. $du = -2x\ dx \implies dx = \frac{du}{-2x}$
-$$V = 2\pi \int_{x=0}^{x=1} -\frac{x}{2x} e^u\ du = -\pi \int_{x=0}^{x=1} e^u\ du$$ \\
-$$= -\pi[e^u]_{x=0}^{x=1} = -\pi[e^{-x^2}]_{x=0}^{x=1} = -\pi[e^{-1}-e^0]$$ \\
+$$V = 2\pi \int_{x=0}^{x=1} -\frac{x}{2x} e^u\ du = -\pi \int_{x=0}^{x=1} e^u\ du$$
+$$= -\pi[e^u]_{x=0}^{x=1} = -\pi[e^{-x^2}]_{x=0}^{x=1} = -\pi[e^{-1}-e^0]$$
 $$= -\pi[\frac{1}{e}-1] = \pi - \frac{\pi}{e}$$
 
 \end{multicols}
@@ -159,9 +160,9 @@ $h = $Aquí se "complica", $\therefore$ se resuelve por discos...
 \textbf{Solución:}
 
 \textit{Por discos...}
-$$V = \int_{-1}^{2} \pi ( (x+4)^2 - (x^2 + 2)^2 ) \ dx$$ \\
-$$= \pi \int_{-1}^{2} (x^2 + 8x + 16 - x^4 - 4x^2 -4) \ dx$$ \\
-$$= \pi \int_{-1}^{2} (-x^4 -3x^2 + 8x + 12)\ dx$$ \\
+$$V = \int_{-1}^{2} \pi ( (x+4)^2 - (x^2 + 2)^2 ) \ dx$$
+$$= \pi \int_{-1}^{2} (x^2 + 8x + 16 - x^4 - 4x^2 -4) \ dx$$
+$$= \pi \int_{-1}^{2} (-x^4 -3x^2 + 8x + 12)\ dx$$
 $$= \pi [\frac{-x^5}{5} - x^3 + 4x^2 + 12x]_{-1}^{2}$$
 $$= \pi [\frac{-32}{5} - 8 + 16 + 24 - \frac{1}{5} - 1 - 4  + 12]$$
 $$= \pi [\frac{-33}{5}+39] = \pi [\frac{-33}{5} + \frac{195}{5}] = \frac{162}{5}\pi$$
@@ -219,7 +220,7 @@ $$= \pi \bigg( 4 \ln{(\sqrt{3}+2)} - \sqrt{3} \bigg) \approx 11.1079...$$
 
 %Gráfica (4)
 \begin{tikzpicture}
-    \begin{axis}[xmin= -1, xmax= 3, ymin= -1, ymax= 4.5, width= 5cm, height= 5cm,
+    \begin{axis}[xmin= -1, xmax= 3, ymin= -1, ymax= 4.5, width= 5.5cm, height= 5.5cm,
         xtick distance= 1, ytick distance = 1, xlabel=$x$, ylabel=$y$, axis lines=center,
         legend entries={$y=x^2$, $y=4x - x^2$, $x = 2$},
         legend style={legend pos=outer north east} ]
@@ -246,7 +247,7 @@ $$= \pi \bigg( 4 \ln{(\sqrt{3}+2)} - \sqrt{3} \bigg) \approx 11.1079...$$
 \textit{Por discos...} \\
 $r_m = 2-\sqrt{y}$ \\
 $r_M = 2-(-\sqrt{4-y} + 2) = \sqrt{4-y}$
-$$V = \int_{0}^{4} \pi ( (\sqrt{4-y})^2 - (2-\sqrt{y})^2 ) \ dy$$\\\\
+$$V = \int_{0}^{4} \pi ( (\sqrt{4-y})^2 - (2-\sqrt{y})^2 ) \ dy$$ \\
 
 \textit{Por cilindros...} \\
 $r = 2-x$ \\
@@ -306,7 +307,6 @@ $$V = \int_{0}^{2} \pi (1+x^2)^2\ dx$$
 $r = y$ \\
 $h = 2$ con $0 \leq y \leq 1$ \\
 $h = 2 - \sqrt{y-1}$ con $1 \leq y \leq 5$
-
 $$V = \int_{0}^{1} 2\pi y (2)\ dy + \int_{1}^{5} 2\pi y (2-\sqrt{y-1})\ dy$$
 
 %Solución (5)
@@ -396,8 +396,38 @@ $$S = \int_{0}^{1} 2\pi (\sqrt[3]{y}) \sqrt{1+ (\frac{y^{-2/3}}{3})^2 }\ dx$$
 %Solución (7)
 \textbf{Solución:}
 
-\textit{Con dx (tal vez)...} \\
-Aproximadamente 5.919430472443023
+\textit{Con dx...}
+$$S = 2\pi \int_{0}^{1} x \sqrt{1+ 9x^4 }\ dx$$
+Sea $u=x^2 \implies du = 2x\ dx$\\
+$\implies dx = \frac{du}{2x}$
+$$S = 2\pi \int_{0}^{1} \frac{1}{2x} x \sqrt{1+ 9u^2 }\ du$$
+$$= \pi \int_{0}^{1} \sqrt{1+ 9u^2 }\ du$$
+Sea $\alpha$ el ángulo diferente de $90\degree$ en un ángulo rectángulo tal que:\\
+$H = \sqrt{1+9u^2}$, $CO = 3u$ y $CA = 1$.\\
+$\tan \alpha = \frac{CO}{CA} = 3u \implies u = \frac{\tan \alpha}{3}$\\
+Y $du = \frac{\sec^2\alpha}{3}\ d\alpha$
+$$S = \pi \int_{u=0}^{u=1} \sqrt{1+ 9(\frac{\tan \alpha}{3})^2 }\ \frac{\sec^2\alpha}{3}\ d\alpha$$
+$$= \frac{\pi}{3} \int_{u=0}^{u=1} \sqrt{1+ \tan^2 \alpha }\ \sec^2\alpha\ d\alpha$$
+$$= \frac{\pi}{3} \int_{u=0}^{u=1} \sqrt{\sec^2\alpha}\ \sec^2\alpha\ d\alpha$$
+$$= \frac{\pi}{3} \int_{u=0}^{u=1} \sec^3 \alpha\ d\alpha$$
+Tenemos que $\int \sec^3x\ dx = \frac{\sec x \tan x}{2} + \frac{1}{2} \int \sec x\ dx$
+$$S = \frac{\pi}{3} \bigg(
+\Big[ \frac{\sec \alpha \tan \alpha}{2} \Big]_{u=0}^{u=1}
++ \frac{1}{2} \int_{u=0}^{u=1} \sec \alpha\ d\alpha \bigg)$$
+$$= \frac{\pi}{3} \bigg(
+\Big[ \frac{\sec \alpha \tan \alpha}{2} \Big]_{u=0}^{u=1}
++ \frac{1}{2} \Big[ \ln{(\tan \alpha+\sec \alpha)} \Big]_{u=0}^{u=1} \bigg)$$
+Pero $\tan\alpha = 3u$ y $\sec\alpha = \sqrt{1+9u^2}$
+$$S = \frac{\pi}{3} \bigg(
+\Big[ \frac{\sqrt{1+9u^2}\ 3u}{2} \Big]_{0}^{1}
++ \frac{1}{2} \Big[ \ln{(3u+\sqrt{1+9u^2})} \Big]_{0}^{1} \bigg)$$
+$$= \frac{\pi}{3} \bigg(
+\Big[ 3\frac{ \sqrt{10} }{2} - 0 \Big]
++ \frac{1}{2} \Big[ \ln{(3+\sqrt{10})} - 0 \Big] \bigg)$$
+$$= \pi \bigg( \frac{ \sqrt{10} }{2}
++ \frac{1}{6} \Big[ \ln{(3+\sqrt{10})} \Big] \bigg)$$
+$$= \pi \bigg( \frac{ 3\sqrt{10} + \ln{ (3+\sqrt{10}) }}{6} \bigg)
+\approx 5.9194304... $$
 
 \end{multicols}
 
